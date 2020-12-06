@@ -5,8 +5,8 @@ stages:
   - deploy
 
 before_script:
-    - npm install -g serverless
-    - bash install.sh
+  - npm install -g serverless
+  - bash install.sh
 
 test before deploy:
   stage: test
@@ -17,5 +17,5 @@ test before deploy:
 deploy to test:
   stage: deploy
   script:
-    - bash deploy.sh dev eu-west-1
+    - bash deploy.sh dev eu-central-1
   environment: dev
